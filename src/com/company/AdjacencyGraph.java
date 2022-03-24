@@ -8,25 +8,21 @@ public class AdjacencyGraph {
     public AdjacencyGraph(){
 
         Vertices = new ArrayList<Vertex>();
-
     }
 
     public void addVertex(Vertex v){
 
         Vertices.add(v);
-
     }
 
     public void addEdge(Vertex from, Vertex to, Integer weight){
 
-        if(!(Vertices.contains(from) && Vertices.contains(to)))
-        {
+        if(!(Vertices.contains(from) && Vertices.contains(to))) {
             System.out.println("Vertices missing from graph");
             return;
         }
 
         Edge newE = new Edge(from, to, weight);
-
     }
 
     public void addUndirectedEdge(Vertex from, Vertex to, Integer weight){
@@ -39,7 +35,6 @@ public class AdjacencyGraph {
 
         Edge newE0 = new Edge(from, to, weight);
         Edge newE1 = new Edge(to, from, weight);
-
     }
 
     public void PrintGraph(){
@@ -66,7 +61,6 @@ class Vertex {
 
         this.name = name;
         OutEdge = new ArrayList<Edge>();
-
     }
 }
 
@@ -82,6 +76,5 @@ class Edge {
         this.to = to;
         this.weight = weight;
         from.OutEdge.add(this);
-
     }
 }
