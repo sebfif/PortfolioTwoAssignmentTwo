@@ -4,36 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //MatrixGraph directed6 = createDirected();
-
-        //directed6.PrintGraph();
-
         AdjacencyGraph adjDirectedG = createDirectedAdj();
-
         adjDirectedG.PrintGraph();
-
     }
-
-    /*public static MatrixGraph createDirected(){
-
-        MatrixGraph new6 = new MatrixGraph(7);
-        new6.addEdge(0,1,1);
-        new6.addEdge(0,2,5);
-        new6.addEdge(0,4,3);
-        new6.addEdge(1,4,1);
-        new6.addEdge(1,5,7);
-        new6.addEdge(2,3,1);
-        new6.addEdge(3,4,1);
-        new6.addEdge(3,6,1);
-        new6.addEdge(4,2,1);
-        new6.addEdge(4,3,3);
-        new6.addEdge(4,5,3);
-        new6.addEdge(4,6,4);
-        new6.addEdge(5,6,1);
-
-        return new6;
-
-    }*/
 
     public static AdjacencyGraph createDirectedAdj(){
 
@@ -70,6 +43,5 @@ public class Main {
         newG.addEdge(V5,V6,1);
 
         return newG;
-
     }
 }
