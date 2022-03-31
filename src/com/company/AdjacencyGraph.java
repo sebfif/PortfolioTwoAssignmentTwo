@@ -15,17 +15,17 @@ public class AdjacencyGraph {
         Vertices.add(v);
     }
 
-    public void addEdge(Vertex from, Vertex to, Integer weight){
+    public void addEdge(Vertex from, Vertex to, Integer dist){
 
         if(!(Vertices.contains(from) && Vertices.contains(to))) {
             System.out.println("Vertices missing from graph");
             return;
         }
 
-        Edge newE = new Edge(from, to, weight);
+        Edge newE = new Edge(from, to, dist);
     }
 
-    public void addUndirectedEdge(Vertex from, Vertex to, Integer weight){
+    public void addUndirectedEdge(Vertex from, Vertex to, Integer dist){
 
         if(!(Vertices.contains(from) && Vertices.contains(to)))
         {
@@ -33,20 +33,20 @@ public class AdjacencyGraph {
             return;
         }
 
-        Edge newE0 = new Edge(from, to, weight);
-        Edge newE1 = new Edge(to, from, weight);
+        Edge newE0 = new Edge(from, to, dist);
+        Edge newE1 = new Edge(to, from, dist);
     }
 
     public void PrintGraph(){
 
         for(int i=0; i<Vertices.size(); i++){
 
-            System.out.println("Vertex " +Vertices.get(i).name + " is connected to:");
+            System.out.println(" "+Vertices.get(i).name + " is connected to:");
 
             Vertex current = Vertices.get(i);
 
             for(Edge e: current.OutEdge){
-                System.out.println(e.to.name + " with weight:" + e.weight);
+                System.out.println(e.to.name + " with dist:" + e.dist);
             }
         }
     }
@@ -68,13 +68,13 @@ class Edge {
 
     Vertex from;
     Vertex to;
-    Integer weight;
+    Integer dist;
 
-    public Edge(Vertex from, Vertex to, Integer weight){
+    public Edge(Vertex from, Vertex to, Integer dist){
 
         this.from = from;
         this.to = to;
-        this.weight = weight;
+        this.dist = dist;
         from.OutEdge.add(this);
     }
 }
