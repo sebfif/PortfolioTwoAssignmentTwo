@@ -60,6 +60,7 @@ public class AdjacencyGraph {
         }
     }
 
+    //Denne del skal skrives om til at være Prims Algorithme og fyldes ud de steder der mangler ting
     public void Dijkstra(Vertex s) {
 
         MinHeap<Vertex> T = new MinHeap<>();
