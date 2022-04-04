@@ -1,11 +1,16 @@
 package com.company;
 
+// Det vi skal have gjort nu, er at skrive noter som disse, hvorend der er noget der skal forklares.
+// Så de steder koden gør noget vigtigt, tænker jeg vi skriver noter der forklare hvad der sker under noten <3
+
 public class Main {
 
     public static void main(String[] args) {
 
         AdjacencyGraph adjDirectedG = createDirectedAdj();
         adjDirectedG.PrintGraph();
+        adjDirectedG.Prims();
+
     }
 
     public static AdjacencyGraph createDirectedAdj(){
