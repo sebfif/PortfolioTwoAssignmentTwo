@@ -62,6 +62,7 @@ public class MinHeap<T extends Comparable<T> >{
     public T viewMin(){
         return minheap.get(0);
     }
+
     private boolean movedown(int pos){
         boolean leftsmaller = leftChild(pos)<size
                 && (minheap.get(leftChild(pos)).compareTo(minheap.get(pos))<0);
