@@ -44,52 +44,52 @@ public class AdjacencyGraph {
     }
 
     // Nye kode der er implementeret fra Emma (skal muligvis omskrives mere, men jeg har arbejdet lidt på det.
-        public void Prims() {
+    public void Prims() {
 
-            MinHeap<Vertex> Q = new MinHeap<>();
-            ArrayList<Vertex> Cities = new ArrayList<>();
+        MinHeap<Vertex> Q = new MinHeap<>();
+        ArrayList<Vertex> Cities = new ArrayList<>();
 
-            if (Vertices.size() > 0) {
-                Vertices.get(0).distance = 0;
-            } else {
-                return;
-            }
+        if (Vertices.size() > 0) {
+            Vertices.get(0).distance = 0;
+        } else {
+            return;
+        }
 
-            for (Vertex city : Vertices) {
-                Q.Insert(city);
-            }
+        for (Vertex city : Vertices) {
+            Q.Insert(city);
+        }
 
-            int MST = 0;
+        int MST = 0;
 
-            Vertex minHeap;
+        Vertex minHeap;
 
-            while (!Q.isEmpty()) {
+        while (!Q.isEmpty()) {
 
-                minHeap = Q.extractMin();
-                Cities.add(minHeap);
-                MST += minHeap.distance;
+            minHeap = Q.extractMin();
+            Cities.add(minHeap);
+            MST += minHeap.distance;
 
-                for (Edge outEdge : minHeap.OutEdge) {
+            for (Edge outEdge : minHeap.OutEdge) {
 
-                    if (!Cities.contains(outEdge.to) && outEdge.dist < outEdge.to.distance) {
+                if (!Cities.contains(outEdge.to) && outEdge.dist < outEdge.to.distance) {
 
-                        outEdge.to.distance = outEdge.dist;
-                        outEdge.to.prev = minHeap;
-                        int pos = Q.getPosition(outEdge.to);
-                        Q.decreasekey(pos);
-                    }
+                    outEdge.to.distance = outEdge.dist;
+                    outEdge.to.prev = minHeap;
+                    int pos = Q.getPosition(outEdge.to);
+                    Q.decreasekey(pos);
                 }
             }
-
-            System.out.println("");
-            System.out.println("Minimum spanning tree distance: " +MST);
-
-            for(int i = 1; i< Cities.size(); i++){
-                System.out.println("From "+ Cities.get(i).prev.name + " to " + Cities.get(i).name +" Edge Distance: "+ Cities.get(i).distance);
-            }
-
-            System.out.println("Price for the powergrid = " + (MST*1000000) + " kr.");
         }
+
+        System.out.println("");
+        System.out.println("Minimum spanning tree distance: " +MST);
+
+        for(int i = 1; i< Cities.size(); i++){
+            System.out.println("From "+ Cities.get(i).prev.name + " to " + Cities.get(i).name +" Edge Distance: "+ Cities.get(i).distance);
+        }
+
+        System.out.println("Price for the powergrid = " + (MST*1000000) + " kr.");
+    }
 }
 
 class Vertex implements Comparable<Vertex> {
