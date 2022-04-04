@@ -85,10 +85,10 @@ public class AdjacencyGraph {
             System.out.println("Minimum spanning tree distance: " +MST);
 
             for(int i = 1; i< Cities.size(); i++){
-                System.out.println("From "+ Cities.get(i).prev.name + " to " + Cities.get(i).name +" Edge Distance: "+ Cities.get(i).distance);
+                System.out.println("From "+ Cities.get(i).prev.name + " to " + Cities.get(i).name +" Distance: "+ Cities.get(i).distance);
             }
 
-            System.out.println("Price for the powergrid = " + (MST*1000000) + " kr.");
+            System.out.println("Price of the powergrid = " + (MST*1000000) + " Danish Crowns.");
         }
 }
 
