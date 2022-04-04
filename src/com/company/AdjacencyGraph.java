@@ -2,6 +2,7 @@ package com.company;
 
 //Vi skal ikke have knude S med, vi skal lave en tilfældig knude (Fra den kode vi har fået fra lektionen i dag)
 //Vi skal bare lave Prims Algorithme inde her i Adjacency Graph
+//Det er ligegyldigt hvilken knude man starter på, i Prims Algorithme
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -61,23 +62,22 @@ public class AdjacencyGraph {
     }
 
     //Denne del skal skrives om til at være Prims Algorithme og fyldes ud de steder der mangler ting
-    public void Dijkstra(Vertex s) {
+    public void Prims (){
 
         MinHeap<Vertex> T = new MinHeap<>();
 
-        for (int i = 0; i < Vertices.size(); i++) {
+        for (int i=0;i<Vertices.size();i++){
             T.Insert(Vertices.get(i));
         }
 
-        s.distance = 0;
+        if(Vertices.size()>0){
+            Vertices.get(0).distance=0;
+            int pos = T.getPosition(Vertices.get(0));
+            T.decreasekey(pos);
+        }
 
-        int pos = T.getPosition(s);
-
-        T.decreasekey(pos);
-
-        while(!T.isEmpty()){
-
-            // fill in
+        while (!T.isEmpty()){
+            Vertex u=T.extractMin();
 
         }
     }
