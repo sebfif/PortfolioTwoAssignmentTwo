@@ -43,7 +43,6 @@ public class AdjacencyGraph {
         }
     }
 
-    // Nye kode der er implementeret fra Emma (skal muligvis omskrives mere, men jeg har arbejdet lidt på det.
         public void Prims() {
 
             MinHeap<Vertex> Q = new MinHeap<>();
