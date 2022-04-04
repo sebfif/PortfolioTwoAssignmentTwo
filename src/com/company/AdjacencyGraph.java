@@ -1,4 +1,5 @@
 package com.company;
+
 import java.util.ArrayList;
 
 public class AdjacencyGraph {
@@ -41,7 +42,7 @@ public class AdjacencyGraph {
 
         for(int i=0; i<Vertices.size(); i++){
 
-            System.out.println(" "+Vertices.get(i).name + " is connected to:");
+            System.out.println(""+Vertices.get(i).name + " is connected to:");
 
             Vertex current = Vertices.get(i);
 
