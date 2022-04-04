@@ -47,6 +47,7 @@ public class prims {
         }
     }
 
+    //AddEdge laver vi inde i Adjacency Graph
     void addEdge(Graph graph, int src, int dest, int weight)
     {
 

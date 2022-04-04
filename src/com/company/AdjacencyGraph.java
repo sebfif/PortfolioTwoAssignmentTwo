@@ -43,6 +43,7 @@ public class AdjacencyGraph {
         for(int i=0; i<Vertices.size(); i++){
 
             System.out.println(""+Vertices.get(i).name + " is connected to:");
+            System.out.println("");
 
             Vertex current = Vertices.get(i);
 
