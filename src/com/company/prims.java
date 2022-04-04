@@ -18,6 +18,7 @@ public class prims {
             weight = b;
         }
     }
+
     static class Graph {
 
         int V;
@@ -57,6 +58,7 @@ public class prims {
         graph.adj[dest].addLast(node);
     }
 
+    //Dette er selve Minimum Spanning Tree som vi ikke har implementeret endnu
     void prims_mst(Graph graph)
     {
 
@@ -112,6 +114,7 @@ public class prims {
                     + " " + o);
     }
 
+    //Den her del er vel det vi laver inde i Main, med bynavnene?
     public static void main(String[] args)
     {
         int V = 9;
