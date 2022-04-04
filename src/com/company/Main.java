@@ -1,7 +1,8 @@
 package com.company;
 
-// Det vi skal have gjort nu, er at skrive noter som disse, hvorend der er noget der skal forklares.
-// Så de steder koden gør noget vigtigt, tænker jeg vi skriver noter der forklare hvad der sker under noten <3
+//Denne kode er udarbejdet af Rasmus Bartholdy, Amalie Bechgaard og Sebastian Sivertsen
+//Koden er uarbejdet med afsæt i koderne fra forelæsningerne samt lidt inspiration fra nettet.
+
 
 public class Main {
 
