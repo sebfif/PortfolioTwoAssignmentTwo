@@ -9,8 +9,9 @@ public class Main {
     public static void main(String[] args) {
 
         AdjacencyGraph adjDirectedG = createDirectedAdj();
-        adjDirectedG.PrintGraph();
-        adjDirectedG.Prims();
+        adjDirectedG.PrintGraph(); //Her kalder vi på PrintGraph classen i AdjacencyGraph
+                                  // vi anerkender at PrintGraph ikke er en nødvendighed for opgaven, men finder den til at være "nice to have"
+        adjDirectedG.Prims(); //Her kalder vi på Prims Algorithme
 
     }
 

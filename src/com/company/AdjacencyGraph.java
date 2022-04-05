@@ -30,6 +30,8 @@ public class AdjacencyGraph {
 
     public void PrintGraph(){
 
+        //Beskriver distancen mellem alle Vertex's Edges
+
         for(int i = 0; i < Vertices.size() ; i++){
 
             System.out.println("");
@@ -44,6 +46,9 @@ public class AdjacencyGraph {
     }
 
         public void Prims() {
+
+            //Prims algorithme aflæser alle de Vertex's der er, samt distancen mellem de forskellige edges.
+            //Derudover udregner den også den korteste distance mellem alle Vertex's, altså et Minimum Spanning Tree.
 
             MinHeap<Vertex> Q = new MinHeap<>();
             ArrayList<Vertex> Cities = new ArrayList<>();
@@ -63,7 +68,6 @@ public class AdjacencyGraph {
             Vertex minHeap;
 
             while (!Q.isEmpty()) {
-
                 minHeap = Q.extractMin();
                 Cities.add(minHeap);
                 MST += minHeap.distance;
