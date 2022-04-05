@@ -1,6 +1,6 @@
 package com.company;
 
-//MinHeap bliver brugt til at indeholde Vertices og hurtigt kunne hive Vertices ud og erstatte, i forhold til at lave et array med Vertices i.
+//MinHeap bliver brugt til at indeholde Vertices og hurtigt kunne hive Vertices ud og erstatte, i modsætning til at lave et array med Vertices i.
 
 import java.util.ArrayList;
 import java.util.HashMap;
